@@ -1,0 +1,10 @@
+data/
+build/
+logs/
+*.geojson
+*.geojsonl
+*.mbtiles
+__pycache__/
+*.pyc
+.venv/
+.claude/

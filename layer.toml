@@ -1,0 +1,29 @@
+# Oakville address layer config. The data-source block (everything above
+# [layer]) is byte-compatible with ontario-address-changes/datasets/oakville.toml.
+# The engine that consumes this lives in ../address-layer.
+
+slug = "oakville"
+provider = "Town of Oakville"
+data_url = "https://maps.oakville.ca/oakgis/rest/services/ArcGISOnline/AGO_Oakville_Misc_Layers/MapServer/15"
+access = "arcgis"            # arcgis | static
+format = "geojson"          # geojson | shapefile (static only)
+license_name = "Open Government Licence - Town of Oakville"
+
+[fields]                     # canonical -> source property
+number = "STREET_NUM"
+street = "SNAME"
+unit   = "UNIT"
+full   = "ADDRESS"
+
+[layer]
+title        = "Oakville Address Points"
+github_repo  = "skfd/oakville-address-layer"          # CONFIRM account
+pages_url    = "https://skfd.github.io/oakville-address-layer"
+# Authoritative source; swap for the friendlier open-data portal page if found.
+dataset_page = "https://maps.oakville.ca/oakgis/rest/services/ArcGISOnline/AGO_Oakville_Misc_Layers/MapServer"
+attribution  = "(c) Town of Oakville, Open Government Licence"
+# Defaults are fine for a small city; uncomment to override:
+# vector_minzoom = 12
+# vector_maxzoom = 19
+# raster_zooms = [16, 17, 18, 19]
+# raster_label_zooms = [17, 18, 19]
