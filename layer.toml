@@ -1,6 +1,6 @@
 # Oakville address layer config. The data-source block (everything above
 # [layer]) is byte-compatible with ontario-address-changes/datasets/oakville.toml.
-# The engine that consumes this lives in ../address-layer.
+# The engine that consumes this lives in ../address-layerist.
 
 slug = "oakville"
 provider = "Town of Oakville"

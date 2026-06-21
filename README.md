@@ -5,18 +5,18 @@ layers (interactive vector + labelled raster) that OpenStreetMap mappers can add
 to the **iD** and **JOSM** editors as a reference overlay.
 
 This is a thin repo: the whole pipeline is the
-[`address-layer`](../address-layer) engine. All that lives here is
+[`address-layerist`](../address-layerist) engine. All that lives here is
 [`layer.toml`](layer.toml) (the data source + field map + site settings) and a
 `run.py` shim.
 
 ## Setup
 
 ```
-pip install -e ../address-layer      # the engine + its deps
+pip install -e ../address-layerist      # the engine + its deps
 ```
 
 The vector-tile step needs WSL2 + tippecanoe once -- see
-[../address-layer/wsl-setup.md](../address-layer/wsl-setup.md).
+[../address-layerist/wsl-setup.md](../address-layerist/wsl-setup.md).
 
 ## Usage
 
