@@ -17,10 +17,10 @@ full   = "ADDRESS"
 
 [layer]
 title        = "Oakville Address Points"
-github_repo  = "skfd/oakville-address-layer"          # CONFIRM account
+github_repo  = "skfd/oakville-address-layer"
 pages_url    = "https://skfd.github.io/oakville-address-layer"
-# Authoritative source; swap for the friendlier open-data portal page if found.
-dataset_page = "https://maps.oakville.ca/oakgis/rest/services/ArcGISOnline/AGO_Oakville_Misc_Layers/MapServer"
+dataset_page = "https://portal-exploreoakville.opendata.arcgis.com/datasets/address-points"
+license_url  = "https://www.oakville.ca/town-hall/town-studies-plans-projects/town-initiatives/open-data/open-data-licence/"
 attribution  = "(c) Town of Oakville, Open Government Licence"
 # Defaults are fine for a small city; uncomment to override:
 # vector_minzoom = 12
