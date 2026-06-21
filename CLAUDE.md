@@ -11,10 +11,13 @@ config, not code.
 Common commands (run from this repo root):
 
 ```
-pip install -e ../address-layerist
+pip install -r requirements.txt   # installs the engine, pinned to a release tag
 python run.py build      # fetch + slim + vector + raster + site
 python run.py update     # build + publish
 ```
+
+For engine development, install editable against the sibling checkout instead:
+`pip install -e ../address-layerist`.
 
 `publish` force-pushes `build/site/` to an orphan `gh-pages` branch and needs a
 git repo with an `origin` remote (do it only when asked).

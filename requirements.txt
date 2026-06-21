@@ -1,6 +1,6 @@
-# The build pipeline is the address-layerist engine (sibling repo). Install it
-# editable so local engine edits take effect immediately:
--e ../address-layerist
-# If the engine is on GitHub instead of a sibling checkout, replace the line
-# above with, e.g.:
-#   address-layerist @ git+https://github.com/skfd/address-layerist.git
+# The build pipeline is the address-layerist engine, installed from GitHub and
+# pinned to a release tag for reproducible builds:
+address-layerist @ git+https://github.com/skfd/address-layerist.git@v0.1.1
+# For local engine development, install editable against a sibling checkout
+# instead:
+#   -e ../address-layerist
