@@ -21,15 +21,19 @@ The vector-tile step needs WSL2 + tippecanoe once -- see
 ## Usage
 
 ```
-python run.py fetch      # paginated pull from the Oakville ArcGIS layer
-python run.py slim       # stream it into a slim GeoJSONL + meta
+addressvault pull oakville   # acquire data into the vault (separate tool)
+python run.py slim       # slim the latest oakville dump into a GeoJSONL + meta
 python run.py vector     # vector (MVT) tiles via WSL tippecanoe
 python run.py raster     # labelled raster (PNG) tiles
 python run.py site       # render the landing page
 
-python run.py build      # all of the above
+python run.py build      # slim + vector + raster + site
 python run.py update     # build + publish (the daily entry point)
 ```
+
+The engine reads the newest `oakville-*.geojson` from `$ADDRESSVAULT_DIR` (or
+`--input PATH`); it does not download. The daily task is
+`addressvault pull oakville && python run.py update`.
 
 Build output lands in `build/site/`; that directory is what gets published.
 
