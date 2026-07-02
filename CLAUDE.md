@@ -12,7 +12,7 @@ Common commands (run from this repo root):
 
 ```
 pip install -r requirements.txt   # installs the engine, pinned to a release tag
-addressvault pull oakville        # acquire data (engine does not fetch)
+addressvault pull oakville --wait # acquire data (engine does not fetch; --wait coalesces)
 python run.py build      # slim + vector + raster + site
 python run.py update     # build + publish
 ```

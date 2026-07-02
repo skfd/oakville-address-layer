@@ -33,7 +33,8 @@ python run.py update     # build + publish (the daily entry point)
 
 The engine reads the newest `oakville-*.geojson` from `$ADDRESSVAULT_DIR` (or
 `--input PATH`); it does not download. The daily task is
-`addressvault pull oakville && python run.py update`.
+`addressvault pull oakville --wait && python run.py update` (`--wait` coalesces
+onto an in-flight pull instead of racing or erroring).
 
 Build output lands in `build/site/`; that directory is what gets published.
 
