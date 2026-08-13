@@ -13,6 +13,7 @@ license_name = "Open Government Licence - Town of Oakville"
 number = "STREET_NUM"
 street = "SNAME"
 unit   = "UNIT"
+suffix = "SUFFIX"            # 24 rows ("335A LAKESHORE RD E"); folded into the number
 full   = "ADDRESS"
 
 [layer]
