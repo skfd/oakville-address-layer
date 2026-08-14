@@ -23,6 +23,10 @@ pages_url    = "https://skfd.github.io/oakville-address-layer"
 dataset_page = "https://portal-exploreoakville.opendata.arcgis.com/datasets/address-points"
 license_url  = "https://www.oakville.ca/town-hall/town-studies-plans-projects/town-initiatives/open-data/open-data-licence/"
 attribution  = "(c) Town of Oakville, Open Government Licence"
+# Keep rendering deeper zooms until nothing is left unlabelled. z19 leaves 57
+# addresses (doors a metre or two apart); z20 labels all of them, so the build
+# stops there and the layer advertises z16-20.
+raster_complete_to = 21
 # Defaults are fine for a small city; uncomment to override:
 # vector_minzoom = 12
 # vector_maxzoom = 19
